@@ -36,3 +36,20 @@ function mostrarAmigos() {
         listaAmigos.appendChild(amigoItem);
     }
 }
+
+function sortearAmigo() {
+    //Validad que haya amigos disponibles
+    if (amigos.length === 0) {
+        alert("Agrega amigos antes de sortear");
+        return;
+    }
+
+    //Generar un índice aleatorio
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    //Obtener el nombre sorteado
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    //Mostrar resultado
+    document.getElementById("resultado").innerHTML = `El amigo sorteador es: ${amigoSorteado}`;
+}
